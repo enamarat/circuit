@@ -5,18 +5,22 @@
 #wrapper {
   border: 2px solid blue;
   display: flex;
-  justify-content: center;
 }
 
 #interface {
   border: 2px solid green;
-  width: 80%;
+  width: 50%;
+}
+
+#description {
+  width: 50%;
+  margin: 10px;
+  text-align: center;
 }
 
 #curcuit {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  width: 100%;
+  margin: 25px;
+  width: 90%;
   height: 40vh;
   position: relative;
 }
@@ -47,6 +51,41 @@
   right: 0;
 }
 
+#battery {
+  width: 50px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+  left: calc(100% - 37.5px);
+  top: 35%;
+  z-index: 3;
+}
+
+#bulb {
+  position: absolute;
+  top: 35%;
+  z-index: 3;
+}
+
+#bulb-head {
+  height: 70px;
+  width: 60px;
+  background-color: yellow;
+  border-radius: 95% 95% 40% 40%;
+  position: absolute;
+  left: calc(0% - 15px);
+  border: 2px solid black;
+}
+
+#bulb-body {
+  height: 30px;
+  width: 40px;
+  background-color: black;
+  position: absolute;
+  left: calc(0% - 6px);
+  top: calc(35% + 70px);
+}
+
 #charge {
   width: 20px;
   height: 20px;
@@ -56,6 +95,13 @@
   position: absolute;
   left: 2px;
   top: 2px;
+}
+
+/** decription **/
+#description h1 {
+  font-size: 45px;
+  font-weight: bold;
+  color: red;
 }
 
 /*** buttons ***/
@@ -69,4 +115,43 @@ button {
   font-size: 20px;
   padding: 5px;
   margin-left: 15px;
+}
+
+/*** Atom ***/
+#atom {
+  margin-top: 10px;
+  /*border: 2px solid red;*/
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.half {
+  display: flex;
+}
+
+.particle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50% 50%;
+}
+
+.proton {
+  background-color: red;
+}
+
+.neutron {
+  background-color: rgb(157,161,201);
+}
+
+.electron {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50%;
+  background-color: yellow;
 }
