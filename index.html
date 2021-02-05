@@ -8,9 +8,39 @@
     <link href="./styles/animations.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-    <div id="wrapper">
+    <header id="main" class="hidden">
+       <label>Back to main</label>
+    </header>
+ <!--Starting Screen -->
+    <section id="starting-screen">
+      <h1> The Basics Of Electricity </h1>
+      <ol class="main-list">
+        <li>Introduction
+          <ol>
+            <li><a href="#atom">Atom</a></li>
+            <li><a href="#charge">Charge</a></li>
+            <li><a href="#circuit">Closed curcuit</a></li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+   <!-- Atom -->
+   <section id="atom" class="hidden">
+     <div class="half">
+       <div class="particle proton"></div>
+       <div class="particle neutron"></div>
+     </div>
+     <div class="half">
+       <div class="particle neutron"></div>
+       <div class="particle proton"></div>
+     </div>
+       <div id="electron-first" class="electron"></div>
+       <div id="electron-second" class="electron"></div>
+   </section>
+   <!-- Closed circuit -->
+    <section id="circuit" class="hidden">
       <div id="interface">
-        <div id="curcuit">
+        <div id="wrapper">
           <div id="right" class="border"></div>
           <div id="left" class="border"></div>
           <div id="top" class="border"></div>
@@ -22,12 +52,8 @@
           </div>
           <div id="battery"> </div>
         </div>
-
-
-
         <button id="start">Start</button>
       </div>
-
       <div id="description">
         <h1> I = U / R </h1>
         <p> where: </p>
@@ -37,20 +63,7 @@
           <li>R - resistance, O (ohms) </li>
         </ul>
       </div>
-   </div>
-
-     <div id="atom">
-         <div class="half">
-           <div class="particle proton"></div>
-           <div class="particle neutron"></div>
-         </div>
-         <div class="half">
-           <div class="particle neutron"></div>
-           <div class="particle proton"></div>
-         </div>
-           <div id="electron-first" class="electron"></div>
-           <div id="electron-second" class="electron"></div>
-    </div>
+   </section>
 
     <script src="./scripts.js"></script>
   </body>
