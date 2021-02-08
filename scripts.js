@@ -1,13 +1,14 @@
 // starting screen
 let openedSection = null;
 const goToSection = (event) => {
-  document.querySelector("#starting-screen").classList.add("hidden");
-  document.querySelector("header").classList.remove("hidden");
-
-  const regex = /#\w+/;
-  //console.log(event.target.href.match(regex));
-  openedSection = event.target.href.match(regex)[0];
-  document.querySelector(`${openedSection}`).classList.add("flex");
+  if (event.target.tagName === "A") {
+    document.querySelector("#starting-screen").classList.add("hidden");
+    document.querySelector("header").classList.remove("hidden");
+    const regex = /#\w+/;
+    //console.log(event.target.href.match(regex));
+    openedSection = event.target.href.match(regex)[0];
+    document.querySelector(`${openedSection}`).classList.add("visible");
+  }
 }
 document.querySelector(".main-list").addEventListener("click", goToSection);
 
