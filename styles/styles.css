@@ -15,12 +15,21 @@ section {
   text-align: center;
 }
 
-.emphasize-noun {
+.text {
+  margin: 20px;
+}
+
+.link-source {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.emphasize-text1 {
   color: red;
   font-weight: bold;
 }
 
-.emphasize-text {
+.emphasize-text2 {
   color: #BD1FDE;
   font-weight: bold;
 }
@@ -46,7 +55,7 @@ p {
   font-size: 25px;
 }
 
-/*** main ***/
+/*** Main ***/
 #main {
   text-align: right;
   margin-top: 10px;
@@ -62,7 +71,7 @@ p {
   color: red;
 }
 
-/*** 1. Starting screen ***/
+/***** 1. Starting screen *****/
 #starting-screen {
   background-color: yellow;
   position: absolute;
@@ -109,7 +118,7 @@ a:hover {
   color: #D04606;
 }
 
-/*** 2. Atom ***/
+/***** 2. Atom *****/
 #atom-picture {
   margin-top: 10px;
   width: 200px;
@@ -186,22 +195,53 @@ a:hover {
   display: block;
 }
 
-.text {
-  margin: 10px;
+/***** 3. Charge *****/
+
+#charge-picture-first,
+#charge-picture-second {
+  width: 30%;
+  position: relative;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.link-source {
-  font-size: 20px;
-  margin-top: 15px;
+.charge {
+  width: 35px;
+  height: 35px;
+  border-radius: 50% 50%;
+  position: absolute;
 }
 
-/*** 3. Charge ***/
+.negative {
+  background-color: yellow;
+}
 
+.positive {
+  position: absolute;
+  background-color: red;
+}
 
-/*** 4. Circuit ***/
+#attracted-negative-charge {
+  left: calc(50% - 35px);
+}
+
+#attracted-positive-charge {
+  right: calc(50% - 35px);
+}
+
+#repelled-negative-charge-1 {
+  left: 0;
+}
+
+#repelled-negative-charge-2 {
+  right: 0;
+}
+
+/***** 4. Circuit *****/
 #curcuit {
   border: 2px solid blue;
-  /*display: flex;*/
 }
 
 #interface {
@@ -282,7 +322,7 @@ a:hover {
   top: calc(35% + 70px);
 }
 
-#charge {
+#charge-circuit {
   width: 20px;
   height: 20px;
   border-radius: 50% 50%;

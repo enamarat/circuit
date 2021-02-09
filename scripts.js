@@ -24,11 +24,11 @@ const startAnimation = () => {
   if (animationStarted === false) {
     document.querySelector("#start").textContent = "Pause";
     animationStarted = true;
-    document.querySelector("#charge").className = "";
+    document.querySelector("#charge-circuit").className = "";
   } else {
     document.querySelector("#start").textContent = "Start";
     animationStarted = false;
-    document.querySelector("#charge").className = "paused";
+    document.querySelector("#charge-circuit").className = "paused";
   }
 }
 document.querySelector("#start").addEventListener("click", startAnimation);
