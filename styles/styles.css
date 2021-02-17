@@ -221,7 +221,7 @@ a:hover {
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 350px;
+  width: 400px;
   height: 160px;
   border: 2px solid black;
 }
@@ -229,13 +229,13 @@ a:hover {
 /** attracted objects **/
 /*left*/
 #left-metallic-ball {
-  transform-origin: 31% 10%;
+  transform-origin: 35% 10%;
 }
 
 #left-metallic-ball .line {
   position: absolute;
   top: 0%;
-  left: 31%;
+  left: 35%;
   height: 120px;
   width: 3px;
   background-color: black;
@@ -244,7 +244,7 @@ a:hover {
 #left-metallic-ball .circle {
   position: absolute;
   top: 95px;
-  left: calc(31% - 25px);
+  left: calc(35% - 25px);
   width: 50px;
   height: 50px;
   background-color: yellow;
@@ -253,13 +253,13 @@ a:hover {
 
 /*right*/
 #right-metallic-ball {
-  transform-origin: 69% 10%;
+  transform-origin: 65% 10%;
 }
 
 #right-metallic-ball .line {
   position: absolute;
   top: 0%;
-  left: 69%;
+  left: 65%;
   height: 120px;
   width: 3px;
   background-color: black;
@@ -268,7 +268,7 @@ a:hover {
 #right-metallic-ball .circle {
   position: absolute;
   top: 95px;
-  left: calc(69% - 25px);
+  left: calc(65% - 25px);
   width: 50px;
   height: 50px;
   background-color: red;
@@ -277,13 +277,13 @@ a:hover {
 
 /** repelled objects **/
 #left-metallic-ball-repelled {
-  transform-origin: 31% 10%;
+  transform-origin: 35% 10%;
 }
 
 #left-metallic-ball-repelled .line {
   position: absolute;
   top: 0%;
-  left: 31%;
+  left: 35%;
   height: 120px;
   width: 3px;
   background-color: black;
@@ -292,7 +292,7 @@ a:hover {
 #left-metallic-ball-repelled .circle {
   position: absolute;
   top: 95px;
-  left: calc(31% - 25px);
+  left: calc(35% - 25px);
   width: 50px;
   height: 50px;
   background-color: yellow;
@@ -301,13 +301,13 @@ a:hover {
 
 /*right*/
 #right-metallic-ball-repelled {
-  transform-origin: 69% 10%;
+  transform-origin: 65% 10%;
 }
 
 #right-metallic-ball-repelled .line {
   position: absolute;
   top: 0%;
-  left: 69%;
+  left: 65%;
   height: 120px;
   width: 3px;
   background-color: black;
@@ -316,7 +316,7 @@ a:hover {
 #right-metallic-ball-repelled .circle {
   position: absolute;
   top: 95px;
-  left: calc(69% - 25px);
+  left: calc(65% - 25px);
   width: 50px;
   height: 50px;
   background-color: yellow;
@@ -438,3 +438,39 @@ button {
   padding: 5px;
   margin-left: 15px;
 }
+
+@media screen and (max-width: 480px) {
+  /*** Charge ***/
+  #objects-attracted-picture,
+  #objects-repelled-picture {
+    width: 90%;
+  }
+
+  #left-metallic-ball {
+    transform-origin: 21% 10%;
+  }
+
+  #left-metallic-ball .line {
+    left: 21%;
+  }
+
+  #left-metallic-ball .circle {
+    left: calc(21% - 25px);
+  }
+
+  #right-metallic-ball {
+    transform-origin: 79% 10%;
+  }
+
+  #right-metallic-ball .line {
+    left: 79%;
+  }
+
+  #right-metallic-ball .circle {
+    left: calc(79% - 25px);
+  }
+}
+
+/*@media screen and (max-width: 1200px) {
+
+}*/
