@@ -71,7 +71,7 @@ p {
   color: red;
 }
 
-/***** 1. Starting screen *****/
+/***** Starting screen *****/
 #starting-screen {
   background-color: yellow;
   position: absolute;
@@ -118,7 +118,7 @@ a:hover {
   color: #D04606;
 }
 
-/***** 2. Atom *****/
+/***** 1. Atom *****/
 #atom-picture {
   margin-top: 10px;
   width: 200px;
@@ -195,49 +195,136 @@ a:hover {
   display: block;
 }
 
-/***** 3. Charge *****/
+/***** 2. Charge *****/
+.horizontal-line-big {
+  background-color: black;
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  top: 22.5px;
+  left: 15px;
+}
 
-#charge-picture-first,
-#charge-picture-second {
-  width: 30%;
+.vertical-line-big {
+  background-color: black;
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  top: 15px;
+  left: 22.5px;
+}
+
+/*** metallic balls ***/
+#objects-attracted-picture,
+#objects-repelled-picture {
   position: relative;
-  height: 40px;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 350px;
+  height: 160px;
+  border: 2px solid black;
 }
 
-.charge {
-  width: 35px;
-  height: 35px;
-  border-radius: 50% 50%;
+/** attracted objects **/
+/*left*/
+#left-metallic-ball {
+  transform-origin: 31% 10%;
+}
+
+#left-metallic-ball .line {
   position: absolute;
+  top: 0%;
+  left: 31%;
+  height: 120px;
+  width: 3px;
+  background-color: black;
 }
 
-.negative {
+#left-metallic-ball .circle {
+  position: absolute;
+  top: 95px;
+  left: calc(31% - 25px);
+  width: 50px;
+  height: 50px;
   background-color: yellow;
+  border-radius: 50% 50%;
 }
 
-.positive {
+/*right*/
+#right-metallic-ball {
+  transform-origin: 69% 10%;
+}
+
+#right-metallic-ball .line {
   position: absolute;
+  top: 0%;
+  left: 69%;
+  height: 120px;
+  width: 3px;
+  background-color: black;
+}
+
+#right-metallic-ball .circle {
+  position: absolute;
+  top: 95px;
+  left: calc(69% - 25px);
+  width: 50px;
+  height: 50px;
   background-color: red;
+  border-radius: 50% 50%;
 }
 
-#attracted-negative-charge {
-  left: calc(50% - 35px);
+/** repelled objects **/
+#left-metallic-ball-repelled {
+  transform-origin: 31% 10%;
 }
 
-#attracted-positive-charge {
-  right: calc(50% - 35px);
+#left-metallic-ball-repelled .line {
+  position: absolute;
+  top: 0%;
+  left: 31%;
+  height: 120px;
+  width: 3px;
+  background-color: black;
 }
 
-#repelled-negative-charge-1 {
-  left: 0;
+#left-metallic-ball-repelled .circle {
+  position: absolute;
+  top: 95px;
+  left: calc(31% - 25px);
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 50% 50%;
 }
 
-#repelled-negative-charge-2 {
-  right: 0;
+/*right*/
+#right-metallic-ball-repelled {
+  transform-origin: 69% 10%;
 }
+
+#right-metallic-ball-repelled .line {
+  position: absolute;
+  top: 0%;
+  left: 69%;
+  height: 120px;
+  width: 3px;
+  background-color: black;
+}
+
+#right-metallic-ball-repelled .circle {
+  position: absolute;
+  top: 95px;
+  left: calc(69% - 25px);
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 50% 50%;
+}
+
+
+/***** 3. Current *****/
 
 /***** 4. Circuit *****/
 #curcuit {

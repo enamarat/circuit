@@ -1,4 +1,4 @@
-/*** atom **/
+/*** Atom ***/
 @keyframes flyRightBottom {
  0% {
    left: 10%;
@@ -125,126 +125,88 @@
  -webkit-animation-duration: 1s;
 }
 
-/*** charge ***/
-/*first picture*/
-@keyframes flyRight {
- 0% {
-   left: 5px;
- }
-
+/*** Charge ***/
+/**attraction**/
+@keyframes swingRight {
   50% {
-    left: calc(50% - 35px);
+   transform: rotateZ(-20deg);
+  }
+
+  100% {
+    transform: rotateZ(-20deg);
   }
 }
 
-@-webkit-keyframes flyRight {
- 0% {
-   left: 5px;
- }
-
+@-webkit-keyframes swingRight {
   50% {
-    left: calc(50% - 35px);
+   transform: rotateZ(-20deg);
+  }
+
+  100% {
+    transform: rotateZ(-20deg);
   }
 }
 
-#attracted-negative-charge {
- animation-name: flyRight;
- animation-duration: 4s;
- animation-timing-function: linear;
- animation-iteration-count: infinite;
- -webkit-animation-name: flyRight;
- -webkit-animation-duration: 4s;
+#left-metallic-ball  {
+  animation-name: swingRight;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: swingRight;
+  -webkit-animation-duration: 4s;
 }
 
-@keyframes flyLeft {
- 0% {
-   right: 5px;
- }
-
+@keyframes swingLeft {
   50% {
-    right: calc(50% - 35px);
+   transform: rotateZ(20deg);
+  }
+
+  100% {
+    transform: rotateZ(20deg);
   }
 }
 
-@-webkit-keyframes flyLeft {
- 0% {
-   right: 5px;
- }
-
+@-webkit-keyframes swingLeft {
   50% {
-    right: calc(50% - 35px);
+   transform: rotateZ(20deg);
+  }
+
+  100% {
+    transform: rotateZ(20deg);
   }
 }
 
-#attracted-positive-charge {
- animation-name: flyLeft;
- animation-duration: 4s;
- animation-timing-function: linear;
- animation-iteration-count: infinite;
- -webkit-animation-name: flyLeft;
- -webkit-animation-duration: 4s;
+#right-metallic-ball {
+  animation-name: swingLeft;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: swingLeft;
+  -webkit-animation-duration: 4s;
+}
+/**repulsion**/
+#left-metallic-ball-repelled  {
+  animation-name: swingLeft;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: swingLeft;
+  -webkit-animation-duration: 4s;
 }
 
-/*second picture*/
-@keyframes flyFromCenterToLeft {
- 0% {
-   left: calc(50% - 35px);
- }
-
-  50% {
-    left: 0;
-  }
+#right-metallic-ball-repelled {
+  animation-name: swingRight;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: swingRight;
+  -webkit-animation-duration: 4s;
 }
 
-@-webkit-keyframes flyFromCenterToLeft {
- 0% {
-   left: calc(50% - 35px);
- }
+/*** Current ***/
 
-  50% {
-    left: 0;
-  }
-}
 
-#repelled-negative-charge-1 {
- animation-name: flyFromCenterToLeft;
- animation-duration: 4s;
- animation-timing-function: linear;
- animation-iteration-count: infinite;
- -webkit-animation-name: flyFromCenterToLeft;
- -webkit-animation-duration: 4s;
-}
-
-@keyframes flyFromCenterToRight {
- 0% {
-   right: calc(50% - 35px);
- }
-
-  50% {
-    right: 0;
-  }
-}
-
-@-webkit-keyframes flyFromCenterToRight {
- 0% {
-   right: calc(50% - 35px);
- }
-
-  50% {
-    right: 0;
-  }
-}
-
-#repelled-negative-charge-2 {
- animation-name: flyFromCenterToRight;
- animation-duration: 4s;
- animation-timing-function: linear;
- animation-iteration-count: infinite;
- -webkit-animation-name: flyFromCenterToRight;
- -webkit-animation-duration: 4s;
-}
-
-/*** curcuit ***/
+/*** Circuit ***/
 @keyframes move {
   0% {
     left: 2px;
