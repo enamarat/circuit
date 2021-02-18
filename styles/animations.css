@@ -204,7 +204,75 @@
 }
 
 /*** Current ***/
+@keyframes moveLeft {
+ 0% {
+   right: 0%;
+ }
+  100% {
+    right: calc(100% - 20px);
+  }
+}
 
+@-webkit-keyframes moveLeft {
+  0% {
+    right: 0%;
+  }
+   100% {
+     right: calc(100% - 20px);
+   }
+}
+
+.carrier {
+  animation-name: swingLeft;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: moveLeft;
+  -webkit-animation-duration: 2s;
+}
+
+#carrier-2 {
+  animation-delay: 0.5s;
+}
+#carrier-3 {
+  animation-delay: 0.6s;
+}
+#carrier-4 {
+  animation-delay: 0.9s;
+}
+#carrier-5 {
+  animation-delay: 0.8s;
+}
+#carrier-6 {
+  animation-delay: 1s;
+}
+#carrier-7 {
+  animation-delay: 1.2s;
+}
+#carrier-8 {
+  animation-delay: 1s;
+}
+#carrier-9 {
+  animation-delay: 1.7s;
+}
+#carrier-10 {
+  animation-delay: 1.5s;
+}
+#carrier-11 {
+  animation-delay: 1.8s;
+}
+#carrier-12 {
+  animation-delay: 1.9s;
+}
+#carrier-13 {
+  animation-delay: 1.6s;
+}
+#carrier-14 {
+  animation-delay: 1.7s;
+}
+#carrier-15 {
+  animation-delay: 1.5s;
+}
 
 /*** Circuit ***/
 @keyframes move {

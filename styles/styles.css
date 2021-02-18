@@ -1,3 +1,29 @@
+/*** tags for exponents ***/
+sub, sup {
+  /* Specified in % so that the sup/sup is the right size relative to the surrounding text */
+  font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+
+sub {
+  /* Move the subscripted text down, but only half as far down as the superscript moved up */
+  bottom: -0.25em;
+}
+
+/*** universal styles ***/
 * {
   box-sizing: border-box;
   font-size: 25px;
@@ -15,6 +41,10 @@ section {
   text-align: center;
 }
 
+p {
+  margin-bottom: 5px;
+}
+
 .text {
   margin: 20px;
 }
@@ -24,13 +54,18 @@ section {
   margin-top: 15px;
 }
 
-.emphasize-text1 {
+.highlight-text1 {
   color: red;
   font-weight: bold;
 }
 
-.emphasize-text2 {
+.highlight-text2 {
   color: #BD1FDE;
+  font-weight: bold;
+}
+
+.highlight-text3 {
+  color: #19BA1C;
   font-weight: bold;
 }
 
@@ -44,6 +79,12 @@ h2 {
   font-size: 45px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 30px;
+  text-decoration: underline;
+  margin-bottom: 5px;
 }
 
 a {
@@ -323,8 +364,57 @@ a:hover {
   border-radius: 50% 50%;
 }
 
-
 /***** 3. Current *****/
+#conductor-picture {
+  width: 450px;
+  height: 105px;
+  border: 2px solid black;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#conductor-picture .vertical-line-big {
+  top: calc(50% - 10px);
+  left: 5%;
+}
+
+#conductor-picture .horizontal-line-big {
+  top: calc(50% - 2.5px);
+  left: calc(5% - 7.5px);
+}
+
+#conductor-picture #negative {
+  top: calc(50% - 2.5px);
+  left: calc(95% - 10px);
+}
+
+.carrier {
+  position: absolute;
+  right: 0%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50%;
+  background-color: yellow;
+  z-index: 3;
+}
+
+#carrier-1, #carrier-6, #carrier-11 {
+ top: 0;
+}
+#carrier-2, #carrier-7, #carrier-12 {
+ top: 20px
+}
+#carrier-3, #carrier-8, #carrier-13 {
+ top: 40px
+}
+#carrier-4, #carrier-9, #carrier-14 {
+ top: 60px
+}
+#carrier-5, #carrier-10, #carrier-15 {
+ top: 80px
+}
 
 /***** 4. Circuit *****/
 #curcuit {
