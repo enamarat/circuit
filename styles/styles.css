@@ -69,6 +69,18 @@ p {
   font-weight: bold;
 }
 
+.important-info {
+  border: 2px solid black;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-style: italic;
+}
+
+.picture-note {
+  font-size: 16px;
+  font-style: italic;
+}
+
 /*** typography ***/
 h1 {
   font-size: 55px;
@@ -84,6 +96,7 @@ h2 {
 h3 {
   font-size: 30px;
   text-decoration: underline;
+  margin-top: 10px;
   margin-bottom: 5px;
 }
 
@@ -406,10 +419,10 @@ a:hover {
 #carrier-2, #carrier-7, #carrier-12 {
  top: 20px
 }
-#carrier-3, #carrier-8, #carrier-13 {
+#carrier-3, #carrier-8, #carrier-13, #carrier-16 {
  top: 40px
 }
-#carrier-4, #carrier-9, #carrier-14 {
+#carrier-4, #carrier-9, #carrier-14, #carrier-17 {
  top: 60px
 }
 #carrier-5, #carrier-10, #carrier-15 {
@@ -558,6 +571,11 @@ button {
 
   #right-metallic-ball .circle {
     left: calc(79% - 25px);
+  }
+
+  /*** Current ***/
+  #conductor-picture {
+    width: 95%;
   }
 }
 

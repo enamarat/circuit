@@ -224,11 +224,11 @@
 
 .carrier {
   animation-name: swingLeft;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   -webkit-animation-name: moveLeft;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 1s;
 }
 
 #carrier-2 {
@@ -272,6 +272,12 @@
 }
 #carrier-15 {
   animation-delay: 1.5s;
+}
+#carrier-16 {
+  animation-delay: 1.4s;
+}
+#carrier-17 {
+  animation-delay: 1.2s;
 }
 
 /*** Circuit ***/
