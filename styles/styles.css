@@ -434,7 +434,7 @@ a:hover {
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  width: 75%;
+  width: 50%;
   height: 40vh;
   position: relative;
 }
@@ -470,7 +470,7 @@ a:hover {
   position: absolute;
   left: calc(100% - 37.5px);
   top: 35%;
-  z-index: 3;
+  z-index: 7;
 }
 
 #tip-battery {
@@ -514,7 +514,7 @@ a:hover {
 #bulb {
   position: absolute;
   top: 35%;
-  z-index: 3;
+  z-index: 7;
 }
 
 #bulb-head {
@@ -536,29 +536,59 @@ a:hover {
   top: calc(35% + 70px);
 }
 
+/**switch**/
+#switch {
+  position: absolute;
+  background-color: grey;
+  border: 2px solid black;
+  width: 100px;
+  height: 25px;
+  top: calc(100% - 25px);
+  left: calc(50% - 50px);
+  z-index: 5;
+}
+
+#switch:hover {
+  cursor: pointer;
+}
+
+.switch-off {
+  transform-origin: calc(50% - 50px) calc(100% - 25px);
+  transform: rotate(-60deg);
+}
+
+.neutral {
+  transform-origin: calc(50% - 50px) calc(100% - 25px);
+  transform: rotate(-60deg);
+}
+
+#patch {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 25px;
+  top: calc(100% - 25px);
+  left: calc(50% - 50px);
+  z-index: 4;
+}
+
+.zIndexLow {
+    z-index: 3;
+}
+
+.zIndexHigh {
+    z-index: 6;
+}
+
 /**charge-circuit**/
 #charge-circuit {
   width: 20px;
   height: 20px;
   border-radius: 50% 50%;
   background-color: yellow;
-  z-index: 3;
   position: absolute;
   left: calc(100% - 22px);
   top: 2px;
-}
-
-/**buttons**/
-button {
-  margin-bottom: 20px;
-}
-
-#start {
-  background-color: black;
-  color: yellow;
-  font-size: 20px;
-  padding: 5px;
-  margin-left: 15px;
 }
 
 /**/
@@ -604,5 +634,11 @@ button {
   /*** Current ***/
   #conductor-picture {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #circuit-wrapper {
+    width: 75%;
   }
 }

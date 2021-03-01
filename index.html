@@ -241,7 +241,7 @@
         <span class="highlight-text2">path in which electrons flow</span>
          from a voltage or current source. </p>
          <p>A basic electric circuit consists of <span class="highlight-text3">a voltage source, a consuming device,
-            wires connecting them, and a switch</span>. For example, a battery may serve as a
+            a conducting material connecting them (copper wires often serve this purpose), and a switch</span>. For example, a battery may serve as a
             voltage source and a bulb as a consuming device. Each component plays its role:
             the source generates the current, the wires conduct it, the consuming device,
             not surprisingly, consumes it. The switch turns the source on or off.</p>
@@ -258,11 +258,13 @@
           <div id="left" class="border"></div>
           <div id="top" class="border"></div>
           <div id="bottom" class="border"></div>
-          <div id="charge-circuit" class="paused"></div>
+          <div id="charge-circuit" class="paused zIndexLow"></div>
+
           <div id="bulb">
             <div id="bulb-head"></div>
             <div id="bulb-body"></div>
           </div>
+
           <div id="battery">
             <div id="tip-battery"></div>
             <div id="top-battery">
@@ -273,8 +275,11 @@
               <div class="horizontal-line"></div>
             </div>
           </div>
+
+          <div id="switch" class="neutral"></div>
+          <div id="patch"></div>
        </div>
-        <button id="start">Start</button>
+        <p class="picture-note">Click on the switch to start the animation.</p>
       </div>
 
       <h3>Ohm's law</h3>

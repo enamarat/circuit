@@ -1,3 +1,6 @@
+// variable for the "circuit" section
+let switchTurnedOn = false;
+
 // starting screen
 let openedSection = null;
 const goToSection = (event) => {
@@ -5,7 +8,6 @@ const goToSection = (event) => {
     document.querySelector("#starting-screen").classList.add("hidden");
     document.querySelector("header").classList.remove("hidden");
     const regex = /#\w+/;
-    //console.log(event.target.href.match(regex));
     openedSection = event.target.href.match(regex)[0];
     document.querySelector(`${openedSection}`).classList.add("visible");
   }
@@ -15,21 +17,30 @@ document.querySelector(".main-list").addEventListener("click", goToSection);
 const returnToMainSection = () => {
   document.querySelector("#starting-screen").classList.remove("hidden");
   document.querySelector(`${openedSection}`).className = "hidden";
+  // stop animation in "Circuit" section
+  document.querySelector("#switch").className = "neutral";
+  switchTurnedOn = false;
+  document.querySelector("#charge-circuit").className = "paused zIndexLow";
 }
 document.querySelector("#main").addEventListener("click", returnToMainSection);
 
-// closed circuit
-let animationStarted = false;
-const startAnimation = () => {
-  if (animationStarted === false) {
-    document.querySelector("#start").textContent = "Pause";
-    animationStarted = true;
-    document.querySelector("#charge-circuit").className = "";
+// circuit
+const toggleTheSwitch = () => {
+  if (switchTurnedOn === false) {
+    document.querySelector("#switch").className = "switch-on";
+    switchTurnedOn = true;
   } else {
-    document.querySelector("#start").textContent = "Start";
-    animationStarted = false;
-    document.querySelector("#charge-circuit").className = "paused";
+    document.querySelector("#switch").className = "switch-off";
+    switchTurnedOn = false;
   }
 }
-document.querySelector("#start").addEventListener("click", startAnimation);
-//.addEventListener("animationend"
+document.querySelector("#switch").addEventListener("click", toggleTheSwitch);
+
+const startCurrentAnimation = () => {
+  if (switchTurnedOn === true) {
+    document.querySelector("#charge-circuit").className = "zIndexHigh";
+  } else {
+    document.querySelector("#charge-circuit").className = "paused zIndexLow";
+  }
+}
+document.querySelector("#switch").addEventListener("animationend", startCurrentAnimation);

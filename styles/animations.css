@@ -1,3 +1,10 @@
+.paused {
+ -webkit-animation-play-state:paused;
+ -moz-animation-play-state:paused;
+ -o-animation-play-state:paused;
+ animation-play-state:paused;
+}
+
 /*** Atom ***/
 @keyframes flyRightBottom {
  0% {
@@ -281,6 +288,7 @@
 }
 
 /*** Circuit ***/
+/*charge*/
 @keyframes moveCounterClockwise {
   0% {
      left: calc(100% - 22px);
@@ -335,13 +343,6 @@
    }
 }
 
-.paused {
- -webkit-animation-play-state:paused;
- -moz-animation-play-state:paused;
- -o-animation-play-state:paused;
- animation-play-state:paused;
-}
-
 #charge-circuit {
  animation-name: moveCounterClockwise;
  animation-duration: 3s;
@@ -349,4 +350,45 @@
  animation-iteration-count: infinite;
  -webkit-animation-name: moveCounterClockwise;
  -webkit-animation-duration: 3s;
+}
+
+/*switch*/
+@keyframes turnOn {
+  0% {
+      transform-origin: calc(50% - 50px) calc(100% - 25px);
+      transform: rotate(-60deg);
+   }
+
+   100% {
+     transform-origin: calc(50% - 50px) calc(100% - 25px);
+     transform: rotate(0deg);
+   }
+}
+
+.switch-on {
+ animation-name: turnOn;
+ animation-duration: 0.5s;
+ animation-timing-function: linear;
+ -webkit-animation-name: turnOn;
+ -webkit-animation-duration: 0.5s;
+}
+/***/
+@keyframes turnOff {
+  0% {
+      transform-origin: calc(50% - 50px) calc(100% - 25px);
+      transform: rotate(0deg);
+   }
+
+   100% {
+     transform-origin: calc(50% - 50px) calc(100% - 25px);
+     transform: rotate(-60deg);
+   }
+}
+
+.switch-off {
+ animation-name: turnOff;
+ animation-duration: 0.5s;
+ animation-timing-function: linear;
+ -webkit-animation-name: turnOff;
+ -webkit-animation-duration: 0.5s;
 }
