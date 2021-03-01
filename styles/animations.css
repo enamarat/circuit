@@ -316,7 +316,7 @@
    }
 }
 
-@-webkit-keyframes move {
+@-webkit-keyframes moveCounterClockwise {
   0% {
      left: calc(100% - 22px);
      top: 2px;
@@ -365,6 +365,18 @@
    }
 }
 
+@-webkit-keyframes turnOn {
+  0% {
+      transform-origin: calc(50% - 50px) calc(100% - 25px);
+      transform: rotate(-60deg);
+   }
+
+   100% {
+     transform-origin: calc(50% - 50px) calc(100% - 25px);
+     transform: rotate(0deg);
+   }
+}
+
 .switch-on {
  animation-name: turnOn;
  animation-duration: 0.5s;
@@ -374,6 +386,18 @@
 }
 /***/
 @keyframes turnOff {
+  0% {
+      transform-origin: calc(50% - 50px) calc(100% - 25px);
+      transform: rotate(0deg);
+   }
+
+   100% {
+     transform-origin: calc(50% - 50px) calc(100% - 25px);
+     transform: rotate(-60deg);
+   }
+}
+
+@-webkit-keyframes turnOff {
   0% {
       transform-origin: calc(50% - 50px) calc(100% - 25px);
       transform: rotate(0deg);
