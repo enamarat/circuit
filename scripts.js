@@ -13,7 +13,7 @@ const goToSection = (event) => {
         document.querySelector(`${openedSection}`).classList.remove("visible");
         document.querySelector(`${openedSection}`).classList.add("hidden");
     }
-    openedSection = event.target.href.match(regex)[0];
+    openedSection = event.target.title.match(regex)[0];
     document.querySelector(`${openedSection}`).classList.add("visible");
   }
 }
