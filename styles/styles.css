@@ -102,11 +102,6 @@ sub {
 }
 
 /*** Main ***/
-#main {
-/*  background-color: white;
-  position: fixed;*/
-}
-
 #hidden-nav {
   width: 25px;
   height: 8px;
