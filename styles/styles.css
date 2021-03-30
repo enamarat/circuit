@@ -59,7 +59,7 @@ p {
 
 /*** typography ***/
 h1 {
-  font-size: 55px;
+  font-size: 3.4rem;
   font-weight: bold;
 }
 
@@ -596,6 +596,14 @@ a:hover {
 
 /*********************************/
 @media screen and (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  #lightning {
+    width: 100px;
+  }
+
   /*** Charge ***/
   #objects-attracted-picture,
   #objects-repelled-picture {
