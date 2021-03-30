@@ -597,11 +597,11 @@ a:hover {
 /*********************************/
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   #lightning {
-    width: 100px;
+    width: 80px;
   }
 
   /*** Charge ***/
